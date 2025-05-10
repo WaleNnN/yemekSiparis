@@ -46,14 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminSyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminSyf.Designer.cs">
+      <DependentUpon>adminSyf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="kayitolsyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayitolsyf.Designer.cs">
+      <DependentUpon>kayitolsyf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicisiparisSyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicisiparisSyf.Designer.cs">
+      <DependentUpon>kullanicisiparisSyf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuanİşlemleriSyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PuanİşlemleriSyf.Designer.cs">
+      <DependentUpon>PuanİşlemleriSyf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜrünİşlemleriSyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜrünİşlemleriSyf.Designer.cs">
+      <DependentUpon>ÜrünİşlemleriSyf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="üyeİşlemleriSyf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="üyeİşlemleriSyf.Designer.cs">
+      <DependentUpon>üyeİşlemleriSyf.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminSyf.resx">
+      <DependentUpon>adminSyf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayitolsyf.resx">
+      <DependentUpon>kayitolsyf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +108,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PuanİşlemleriSyf.resx">
+      <DependentUpon>PuanİşlemleriSyf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜrünİşlemleriSyf.resx">
+      <DependentUpon>ÜrünİşlemleriSyf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="üyeİşlemleriSyf.resx">
+      <DependentUpon>üyeİşlemleriSyf.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
