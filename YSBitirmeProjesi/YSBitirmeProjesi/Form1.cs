@@ -22,9 +22,15 @@ namespace YSBitirmeProjesi
             adminSyf adminSyf = new adminSyf();
             int kuladi = Convert.ToInt32(kuladitxtbox.Text);
             int sifre = Convert.ToInt32(sifretxtbox.Text);
-            if(kuladi ==0 && sifre == 0)
+            if (kuladi == 0 && sifre == 0)
             {
                 adminSyf.Show();
+            }
+            
+            kullanicisiparisSyf kullanicisiparisSyf = new kullanicisiparisSyf();
+            if (kuladi == 1 && sifre == 1)
+            {
+                kullanicisiparisSyf.Show();
             }
         }
 

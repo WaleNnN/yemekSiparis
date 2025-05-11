@@ -42,6 +42,8 @@
             this.üyeİslmTelefontxt = new System.Windows.Forms.TextBox();
             this.üyeİslmGüncelleBtn = new System.Windows.Forms.Button();
             this.üyeİslmSilBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -142,7 +144,7 @@
             // 
             // üyeİslmGüncelleBtn
             // 
-            this.üyeİslmGüncelleBtn.Location = new System.Drawing.Point(57, 327);
+            this.üyeİslmGüncelleBtn.Location = new System.Drawing.Point(305, 218);
             this.üyeİslmGüncelleBtn.Name = "üyeİslmGüncelleBtn";
             this.üyeİslmGüncelleBtn.Size = new System.Drawing.Size(84, 37);
             this.üyeİslmGüncelleBtn.TabIndex = 18;
@@ -151,18 +153,27 @@
             // 
             // üyeİslmSilBtn
             // 
-            this.üyeİslmSilBtn.Location = new System.Drawing.Point(160, 327);
+            this.üyeİslmSilBtn.Location = new System.Drawing.Point(395, 218);
             this.üyeİslmSilBtn.Name = "üyeİslmSilBtn";
             this.üyeİslmSilBtn.Size = new System.Drawing.Size(84, 37);
             this.üyeİslmSilBtn.TabIndex = 19;
             this.üyeİslmSilBtn.Text = "Üyeyi Sil";
             this.üyeİslmSilBtn.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(305, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(397, 150);
+            this.dataGridView1.TabIndex = 20;
+            // 
             // üyeİşlemleriSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 433);
+            this.ClientSize = new System.Drawing.Size(729, 338);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.üyeİslmSilBtn);
             this.Controls.Add(this.üyeİslmGüncelleBtn);
             this.Controls.Add(this.üyeİslmTelefontxt);
@@ -179,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "üyeİşlemleriSyf";
             this.Text = "üyeİşlemleriSyf";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +212,6 @@
         private System.Windows.Forms.TextBox üyeİslmTelefontxt;
         private System.Windows.Forms.Button üyeİslmGüncelleBtn;
         private System.Windows.Forms.Button üyeİslmSilBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

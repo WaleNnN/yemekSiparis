@@ -39,11 +39,13 @@
             this.ÜrünİslmÜrünTürütxt = new System.Windows.Forms.TextBox();
             this.ÜrünİslmÜrünFiyatitxt = new System.Windows.Forms.TextBox();
             this.ÜrünİslmÜrünStoktxt = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ÜrünİslmÜrünEkle
             // 
-            this.ÜrünİslmÜrünEkle.Location = new System.Drawing.Point(130, 237);
+            this.ÜrünİslmÜrünEkle.Location = new System.Drawing.Point(141, 232);
             this.ÜrünİslmÜrünEkle.Name = "ÜrünİslmÜrünEkle";
             this.ÜrünİslmÜrünEkle.Size = new System.Drawing.Size(86, 39);
             this.ÜrünİslmÜrünEkle.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // ÜrünİslmÜrünBilgileriGüncelle
             // 
-            this.ÜrünİslmÜrünBilgileriGüncelle.Location = new System.Drawing.Point(38, 237);
+            this.ÜrünİslmÜrünBilgileriGüncelle.Location = new System.Drawing.Point(49, 232);
             this.ÜrünİslmÜrünBilgileriGüncelle.Name = "ÜrünİslmÜrünBilgileriGüncelle";
             this.ÜrünİslmÜrünBilgileriGüncelle.Size = new System.Drawing.Size(86, 39);
             this.ÜrünİslmÜrünBilgileriGüncelle.TabIndex = 1;
@@ -61,7 +63,7 @@
             // 
             // ÜrünİslmÜrünSil
             // 
-            this.ÜrünİslmÜrünSil.Location = new System.Drawing.Point(222, 237);
+            this.ÜrünİslmÜrünSil.Location = new System.Drawing.Point(233, 232);
             this.ÜrünİslmÜrünSil.Name = "ÜrünİslmÜrünSil";
             this.ÜrünİslmÜrünSil.Size = new System.Drawing.Size(86, 39);
             this.ÜrünİslmÜrünSil.TabIndex = 2;
@@ -132,11 +134,20 @@
             this.ÜrünİslmÜrünStoktxt.Size = new System.Drawing.Size(100, 20);
             this.ÜrünİslmÜrünStoktxt.TabIndex = 10;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(264, 47);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(352, 150);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // ÜrünİşlemleriSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 357);
+            this.ClientSize = new System.Drawing.Size(644, 357);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ÜrünİslmÜrünStoktxt);
             this.Controls.Add(this.ÜrünİslmÜrünFiyatitxt);
             this.Controls.Add(this.ÜrünİslmÜrünTürütxt);
@@ -150,6 +161,7 @@
             this.Controls.Add(this.ÜrünİslmÜrünEkle);
             this.Name = "ÜrünİşlemleriSyf";
             this.Text = "ÜrünİşlemleriSyf";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +180,6 @@
         private System.Windows.Forms.TextBox ÜrünİslmÜrünTürütxt;
         private System.Windows.Forms.TextBox ÜrünİslmÜrünFiyatitxt;
         private System.Windows.Forms.TextBox ÜrünİslmÜrünStoktxt;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

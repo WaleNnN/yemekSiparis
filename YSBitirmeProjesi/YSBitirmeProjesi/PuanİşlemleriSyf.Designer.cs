@@ -34,6 +34,8 @@
             this.tlİslmTLtxt = new System.Windows.Forms.TextBox();
             this.tlİslemtlYüklebtn = new System.Windows.Forms.Button();
             this.tlİslmGüncelleBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +72,7 @@
             // 
             // tlİslemtlYüklebtn
             // 
-            this.tlİslemtlYüklebtn.Location = new System.Drawing.Point(105, 164);
+            this.tlİslemtlYüklebtn.Location = new System.Drawing.Point(254, 184);
             this.tlİslemtlYüklebtn.Name = "tlİslemtlYüklebtn";
             this.tlİslemtlYüklebtn.Size = new System.Drawing.Size(83, 28);
             this.tlİslemtlYüklebtn.TabIndex = 4;
@@ -79,18 +81,27 @@
             // 
             // tlİslmGüncelleBtn
             // 
-            this.tlİslmGüncelleBtn.Location = new System.Drawing.Point(209, 164);
+            this.tlİslmGüncelleBtn.Location = new System.Drawing.Point(343, 184);
             this.tlİslmGüncelleBtn.Name = "tlİslmGüncelleBtn";
             this.tlİslmGüncelleBtn.Size = new System.Drawing.Size(83, 28);
             this.tlİslmGüncelleBtn.TabIndex = 5;
             this.tlİslmGüncelleBtn.Text = "Güncelle";
             this.tlİslmGüncelleBtn.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(254, 38);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(326, 120);
+            this.dataGridView1.TabIndex = 6;
+            // 
             // PuanİşlemleriSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 269);
+            this.ClientSize = new System.Drawing.Size(611, 254);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tlİslmGüncelleBtn);
             this.Controls.Add(this.tlİslemtlYüklebtn);
             this.Controls.Add(this.tlİslmTLtxt);
@@ -100,6 +111,7 @@
             this.Name = "PuanİşlemleriSyf";
             this.Text = "PuanİşlemleriSyf";
             this.Load += new System.EventHandler(this.PuanİşlemleriSyf_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +125,6 @@
         private System.Windows.Forms.TextBox tlİslmTLtxt;
         private System.Windows.Forms.Button tlİslemtlYüklebtn;
         private System.Windows.Forms.Button tlİslmGüncelleBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
