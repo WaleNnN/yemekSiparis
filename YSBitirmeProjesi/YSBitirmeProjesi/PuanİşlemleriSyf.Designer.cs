@@ -78,6 +78,7 @@
             this.tlİslemtlYüklebtn.TabIndex = 4;
             this.tlİslemtlYüklebtn.Text = "TL Yükle";
             this.tlİslemtlYüklebtn.UseVisualStyleBackColor = true;
+            this.tlİslemtlYüklebtn.Click += new System.EventHandler(this.tlİslemtlYüklebtn_Click);
             // 
             // tlİslmGüncelleBtn
             // 
@@ -95,6 +96,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(326, 120);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // PuanİşlemleriSyf
             // 

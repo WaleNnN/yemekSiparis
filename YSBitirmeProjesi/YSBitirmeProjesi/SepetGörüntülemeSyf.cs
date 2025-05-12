@@ -16,5 +16,13 @@ namespace YSBitirmeProjesi
         {
             InitializeComponent();
         }
+
+    
+
+
+        private void sptGrntleÖdemeYap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

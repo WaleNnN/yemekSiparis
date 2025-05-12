@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.sptGrntleÖdemeYap = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -44,12 +45,13 @@
             // 
             // sptGrntleÖdemeYap
             // 
-            this.sptGrntleÖdemeYap.Location = new System.Drawing.Point(38, 247);
+            this.sptGrntleÖdemeYap.Location = new System.Drawing.Point(38, 248);
             this.sptGrntleÖdemeYap.Name = "sptGrntleÖdemeYap";
             this.sptGrntleÖdemeYap.Size = new System.Drawing.Size(88, 35);
             this.sptGrntleÖdemeYap.TabIndex = 2;
             this.sptGrntleÖdemeYap.Text = "Ödeme Yap";
             this.sptGrntleÖdemeYap.UseVisualStyleBackColor = true;
+            this.sptGrntleÖdemeYap.Click += new System.EventHandler(this.sptGrntleÖdemeYap_Click);
             // 
             // listBox1
             // 
@@ -59,11 +61,20 @@
             this.listBox1.Size = new System.Drawing.Size(135, 160);
             this.listBox1.TabIndex = 0;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(180, 61);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(50, 160);
+            this.listBox2.TabIndex = 3;
+            // 
             // SepetGörüntülemeSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 318);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.sptGrntleÖdemeYap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -77,6 +88,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button sptGrntleÖdemeYap;
-        private System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.ListBox listBox2;
     }
 }
