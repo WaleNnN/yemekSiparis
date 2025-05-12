@@ -35,11 +35,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tcNotxtbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.adisoyaditxt = new System.Windows.Forms.TextBox();
+            this.kullaniciaditxt = new System.Windows.Forms.TextBox();
+            this.sifretxt = new System.Windows.Forms.TextBox();
+            this.adrestxt = new System.Windows.Forms.TextBox();
+            this.telefontxt = new System.Windows.Forms.TextBox();
             this.kayitOlBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -104,40 +104,40 @@
             this.tcNotxtbox.Size = new System.Drawing.Size(100, 20);
             this.tcNotxtbox.TabIndex = 6;
             // 
-            // textBox1
+            // adisoyaditxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.adisoyaditxt.Location = new System.Drawing.Point(134, 83);
+            this.adisoyaditxt.Name = "adisoyaditxt";
+            this.adisoyaditxt.Size = new System.Drawing.Size(100, 20);
+            this.adisoyaditxt.TabIndex = 7;
             // 
-            // textBox2
+            // kullaniciaditxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.kullaniciaditxt.Location = new System.Drawing.Point(134, 128);
+            this.kullaniciaditxt.Name = "kullaniciaditxt";
+            this.kullaniciaditxt.Size = new System.Drawing.Size(100, 20);
+            this.kullaniciaditxt.TabIndex = 8;
             // 
-            // textBox3
+            // sifretxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.sifretxt.Location = new System.Drawing.Point(134, 179);
+            this.sifretxt.Name = "sifretxt";
+            this.sifretxt.Size = new System.Drawing.Size(100, 20);
+            this.sifretxt.TabIndex = 9;
             // 
-            // textBox4
+            // adrestxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 223);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.adrestxt.Location = new System.Drawing.Point(134, 226);
+            this.adrestxt.Name = "adrestxt";
+            this.adrestxt.Size = new System.Drawing.Size(100, 20);
+            this.adrestxt.TabIndex = 10;
             // 
-            // textBox5
+            // telefontxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(134, 269);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
+            this.telefontxt.Location = new System.Drawing.Point(134, 269);
+            this.telefontxt.Name = "telefontxt";
+            this.telefontxt.Size = new System.Drawing.Size(100, 20);
+            this.telefontxt.TabIndex = 11;
             // 
             // kayitOlBtn
             // 
@@ -147,18 +147,19 @@
             this.kayitOlBtn.TabIndex = 12;
             this.kayitOlBtn.Text = "Kayıt Ol";
             this.kayitOlBtn.UseVisualStyleBackColor = true;
+            this.kayitOlBtn.Click += new System.EventHandler(this.kayitOlBtn_Click);
             // 
             // kayitolsyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 408);
+            this.ClientSize = new System.Drawing.Size(355, 400);
             this.Controls.Add(this.kayitOlBtn);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.telefontxt);
+            this.Controls.Add(this.adrestxt);
+            this.Controls.Add(this.sifretxt);
+            this.Controls.Add(this.kullaniciaditxt);
+            this.Controls.Add(this.adisoyaditxt);
             this.Controls.Add(this.tcNotxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -182,11 +183,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tcNotxtbox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox adisoyaditxt;
+        private System.Windows.Forms.TextBox kullaniciaditxt;
+        private System.Windows.Forms.TextBox sifretxt;
+        private System.Windows.Forms.TextBox adrestxt;
+        private System.Windows.Forms.TextBox telefontxt;
         private System.Windows.Forms.Button kayitOlBtn;
     }
 }

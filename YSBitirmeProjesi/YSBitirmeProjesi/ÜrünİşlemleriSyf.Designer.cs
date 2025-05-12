@@ -51,6 +51,7 @@
             this.ÜrünİslmÜrünEkle.TabIndex = 0;
             this.ÜrünİslmÜrünEkle.Text = "Ürün Ekle";
             this.ÜrünİslmÜrünEkle.UseVisualStyleBackColor = true;
+            this.ÜrünİslmÜrünEkle.Click += new System.EventHandler(this.ÜrünİslmÜrünEkle_Click);
             // 
             // ÜrünİslmÜrünBilgileriGüncelle
             // 
@@ -60,6 +61,7 @@
             this.ÜrünİslmÜrünBilgileriGüncelle.TabIndex = 1;
             this.ÜrünİslmÜrünBilgileriGüncelle.Text = "Ürün Bilgileri Güncelle";
             this.ÜrünİslmÜrünBilgileriGüncelle.UseVisualStyleBackColor = true;
+            this.ÜrünİslmÜrünBilgileriGüncelle.Click += new System.EventHandler(this.ÜrünİslmÜrünBilgileriGüncelle_Click);
             // 
             // ÜrünİslmÜrünSil
             // 
@@ -69,6 +71,7 @@
             this.ÜrünİslmÜrünSil.TabIndex = 2;
             this.ÜrünİslmÜrünSil.Text = "Ürün Sil";
             this.ÜrünİslmÜrünSil.UseVisualStyleBackColor = true;
+            this.ÜrünİslmÜrünSil.Click += new System.EventHandler(this.ÜrünİslmÜrünSil_Click);
             // 
             // label1
             // 
@@ -102,9 +105,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(46, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Ürün Fiyatı";
+            this.label4.Text = "Ürün Fiyatı/KG";
             // 
             // ÜrünİslmÜrünAditxt
             // 
@@ -141,6 +144,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(352, 150);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // ÜrünİşlemleriSyf
             // 
@@ -161,6 +165,7 @@
             this.Controls.Add(this.ÜrünİslmÜrünEkle);
             this.Name = "ÜrünİşlemleriSyf";
             this.Text = "ÜrünİşlemleriSyf";
+            this.Load += new System.EventHandler(this.ÜrünİşlemleriSyf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

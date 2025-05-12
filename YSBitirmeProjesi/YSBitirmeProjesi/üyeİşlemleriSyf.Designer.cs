@@ -150,6 +150,7 @@
             this.üyeİslmGüncelleBtn.TabIndex = 18;
             this.üyeİslmGüncelleBtn.Text = "Üye Bilgilerini Güncelle";
             this.üyeİslmGüncelleBtn.UseVisualStyleBackColor = true;
+            this.üyeİslmGüncelleBtn.Click += new System.EventHandler(this.üyeİslmGüncelleBtn_Click);
             // 
             // üyeİslmSilBtn
             // 
@@ -159,6 +160,7 @@
             this.üyeİslmSilBtn.TabIndex = 19;
             this.üyeİslmSilBtn.Text = "Üyeyi Sil";
             this.üyeİslmSilBtn.UseVisualStyleBackColor = true;
+            this.üyeİslmSilBtn.Click += new System.EventHandler(this.üyeİslmSilBtn_Click);
             // 
             // dataGridView1
             // 
@@ -167,6 +169,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(397, 150);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // üyeİşlemleriSyf
             // 
@@ -190,6 +193,7 @@
             this.Controls.Add(this.label1);
             this.Name = "üyeİşlemleriSyf";
             this.Text = "üyeİşlemleriSyf";
+            this.Load += new System.EventHandler(this.üyeİşlemleriSyf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

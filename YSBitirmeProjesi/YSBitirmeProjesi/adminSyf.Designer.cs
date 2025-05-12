@@ -59,7 +59,7 @@
             this.puanİslemleriSyf.Name = "puanİslemleriSyf";
             this.puanİslemleriSyf.Size = new System.Drawing.Size(84, 31);
             this.puanİslemleriSyf.TabIndex = 2;
-            this.puanİslemleriSyf.Text = "Puan İşlemleri";
+            this.puanİslemleriSyf.Text = "TL İşlemleri";
             this.puanİslemleriSyf.UseVisualStyleBackColor = true;
             this.puanİslemleriSyf.Click += new System.EventHandler(this.puanİslemleriSyf_Click);
             // 
