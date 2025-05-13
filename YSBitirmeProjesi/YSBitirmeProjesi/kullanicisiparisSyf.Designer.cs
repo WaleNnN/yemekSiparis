@@ -62,7 +62,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.ımageList4 = new System.Windows.Forms.ImageList(this.components);
             this.visibleofftc = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -365,22 +364,11 @@
             this.visibleofftc.Text = "label10";
             this.visibleofftc.Visible = false;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(321, 447);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // kullanicisiparisSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 589);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.visibleofftc);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
@@ -453,6 +441,5 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ImageList ımageList4;
         public System.Windows.Forms.Label visibleofftc;
-        private System.Windows.Forms.Button button5;
     }
 }

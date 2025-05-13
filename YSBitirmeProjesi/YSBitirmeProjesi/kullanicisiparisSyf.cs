@@ -173,8 +173,9 @@ namespace YSBitirmeProjesi
                     string siparisTarihi = DateTime.Now.ToString("yyyy-MM-dd"); // MySQL DATE formatı: 2025-05-14
                     string siparisSaati = DateTime.Now.ToString("HH:mm:ss");   // MySQL TIME formatı: 00:28:00
 
-                    // SQL sorgusunu oluşturuyoruz (Güncelleme işlemi)
-                    string sql = $"UPDATE siparisler SET UrunAdi = '{urunAdi}', Adet = {adet}, Fiyati = {fiyat.Replace(",", ".")}, SiparisTarihi = '{siparisTarihi}', SiparisSaati = '{siparisSaati}' WHERE TcNo = '{tc}'";
+                    // SQL sorgusunu oluşturuyoruz (Ekleme işlemi)
+                    string sql = $"INSERT INTO siparisler (TcNo, UrunAdi, Adet, Fiyati, SiparisTarihi, SiparisSaati) " +
+                                 $"VALUES ('{tc}', '{urunAdi}', {adet}, {fiyat.Replace(",", ".")}, '{siparisTarihi}', '{siparisSaati}')";
 
                     // Sorguyu çalıştırıyoruz
                     MySqlCommand cmd = new MySqlCommand(sql, conn2);
@@ -183,7 +184,6 @@ namespace YSBitirmeProjesi
 
                 conn2.Close();
             }
-
 
 
         }
@@ -210,6 +210,17 @@ namespace YSBitirmeProjesi
         {
             siparisGecmisi siparisGecmisi = new siparisGecmisi();
             siparisGecmisi.ShowDialog();
+
+            string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_;";
+            MySqlConnection connect = new MySqlConnection(connectionString);
+            string tc = visibleofftc.Text;
+            string komut = $"SELECT * FROM siparisler WHERE TcNo = '{tc}'";
+            connect.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(komut, connect);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connect.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
