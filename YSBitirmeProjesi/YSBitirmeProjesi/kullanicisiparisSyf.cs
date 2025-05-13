@@ -14,7 +14,7 @@ namespace YSBitirmeProjesi
 {
     public partial class kullanicisiparisSyf : Form
     {
-        SepetGörüntülemeSyf sepetForm = new SepetGörüntülemeSyf();
+        
         public kullanicisiparisSyf()
         {
             InitializeComponent();
@@ -83,12 +83,11 @@ namespace YSBitirmeProjesi
             }
             else if (dataGridView1.SelectedRows.Count > 0)
             {
-                string secilenYemek = dataGridView1.SelectedRows[0].Cells[1].Value.ToString(); // YemekAdi
-                string secilenFiyat = dataGridView1.SelectedRows[0].Cells[3].Value.ToString(); // TL
-
+                string secilenYemek = dataGridView1.SelectedRows[0].Cells[1].Value.ToString(); 
+                string secilenFiyat = dataGridView1.SelectedRows[0].Cells[3].Value.ToString(); 
                 listBox1.Items.Add(secilenYemek);
                 listBox2.Items.Add(adet.ToString());
-                listBox3.Items.Add(secilenFiyat + " TL");
+                listBox3.Items.Add(secilenFiyat);
             }
             else
             {
@@ -104,8 +103,8 @@ namespace YSBitirmeProjesi
 
             for (int i = 0; i < listBox2.Items.Count; i++)
             {
-                int adet = Convert.ToInt32(listBox2.Items[i]); // listBox2: adet
-                string fiyatStr = listBox3.Items[i].ToString().Replace(" TL", ""); // listBox3: fiyat (örn: 20 TL)
+                int adet = Convert.ToInt32(listBox2.Items[i]); 
+                string fiyatStr = listBox3.Items[i].ToString().Replace(" TL", ""); 
                 double fiyat = Convert.ToDouble(fiyatStr);
                 toplam += adet * fiyat;
             }
@@ -133,17 +132,16 @@ namespace YSBitirmeProjesi
 
                 MessageBox.Show("Ödeme başarılı!");
 
-                // Veritabanı güncelleme
                 using (MySqlConnection conn = new MySqlConnection("Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_;"))
                 {
                     conn.Open();
 
-                    // Giriş yapan kullanıcının adıyla güncelle (örneğin lblKullaniciAd.Text kullanıcı adını tutuyor olsun)
+                    // Kullanıcı adı ve yeni TL
                     string kullaniciAdi = lblAdiSoyadi.Text;
-                    string sql = $"UPDATE uyeler SET TL = '{lblTL.Text}' WHERE AdiSoyadi = '{kullaniciAdi}'";
+                    string sql = $"UPDATE uyeler SET TL = '{lblTL.Text.ToString().Replace(",", ".")}' WHERE AdiSoyadi = '{kullaniciAdi}'";
+
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
-
                     conn.Close();
                 }
             }
@@ -152,11 +150,47 @@ namespace YSBitirmeProjesi
                 MessageBox.Show("Yetersiz bakiye.");
             }
 
+            // Veritabanı bağlantı dizesini tanımlayalım
+            string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_;";
+
+            // Veritabanı bağlantısını açalım
+            using (MySqlConnection conn2 = new MySqlConnection(connectionString))
+            {
+                conn2.Open();
+
+                // ListBox1, ListBox2, ListBox3'teki öğeleri döngü ile alıyoruz
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                {
+                    // Visibleofftc label'ındaki TC numarasını alıyoruz
+                    string tc = visibleofftc.Text; // TC'yi string olarak alıyoruz çünkü genellikle TC sayısal değeri string olarak saklanır
+
+                    // ListBox'lardan ilgili verileri alıyoruz
+                    string urunAdi = listBox1.Items[i].ToString();  // UrunAdi
+                    string adet = listBox2.Items[i].ToString();     // Adet
+                    string fiyat = listBox3.Items[i].ToString();    // Fiyat
+
+                    // Güncel tarih ve saati alalım
+                    string siparisTarihi = DateTime.Now.ToString("yyyy-MM-dd"); // MySQL DATE formatı: 2025-05-14
+                    string siparisSaati = DateTime.Now.ToString("HH:mm:ss");   // MySQL TIME formatı: 00:28:00
+
+                    // SQL sorgusunu oluşturuyoruz (Güncelleme işlemi)
+                    string sql = $"UPDATE siparisler SET UrunAdi = '{urunAdi}', Adet = {adet}, Fiyati = {fiyat.Replace(",", ".")}, SiparisTarihi = '{siparisTarihi}', SiparisSaati = '{siparisSaati}' WHERE TcNo = '{tc}'";
+
+                    // Sorguyu çalıştırıyoruz
+                    MySqlCommand cmd = new MySqlCommand(sql, conn2);
+                    cmd.ExecuteNonQuery();
+                }
+
+                conn2.Close();
+            }
+
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Seçili indexi kontrol et
+         
             int seciliIndex = listBox1.SelectedIndex;
 
             if (seciliIndex >= 0 && seciliIndex < listBox1.Items.Count &&
@@ -170,6 +204,17 @@ namespace YSBitirmeProjesi
             {
                 MessageBox.Show("Lütfen silinecek bir öğe seçin.");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            siparisGecmisi siparisGecmisi = new siparisGecmisi();
+            siparisGecmisi.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

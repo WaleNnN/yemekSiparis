@@ -22,55 +22,65 @@ namespace YSBitirmeProjesi
 
         public void girisYapbtn_Click(object sender, EventArgs e)
         {
-            
-          
-            
-                string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_";
-                MySqlConnection connect = new MySqlConnection(connectionString);
-                string sorgu = $"SELECT TcNo,AdiSoyadi, Adres, Telefon, TL FROM Uyeler WHERE KullaniciAdi = '{kuladitxtbox.Text}' AND Sifre = '{sifretxtbox.Text}'";
 
-                MySqlCommand komut = new MySqlCommand(sorgu, connect);
 
-                connect.Open();
-                MySqlDataReader reader = komut.ExecuteReader();
 
-                if (reader.Read())
-                {
+            string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_";
+            MySqlConnection connect = new MySqlConnection(connectionString);
+            string sorgu = $"SELECT TcNo,AdiSoyadi, Adres, Telefon, TL FROM Uyeler WHERE KullaniciAdi = '{kuladitxtbox.Text}' AND Sifre = '{sifretxtbox.Text}'";
 
-                    kullanicisiparisSyf kul = new kullanicisiparisSyf();
-                    string adiSoyadi = reader["AdiSoyadi"].ToString();                  
-                    string tL = reader["TL"].ToString();
-                    kul.lblAdiSoyadi.Text = adiSoyadi;              
-                    kul.lblTL.Text = tL;                
-                    kul.ShowDialog();
+            MySqlCommand komut = new MySqlCommand(sorgu, connect);
+
+            connect.Open();
+            MySqlDataReader reader = komut.ExecuteReader();
+
+            if (reader.Read())
+            {
+
+                kullanicisiparisSyf kul = new kullanicisiparisSyf();
+                string adiSoyadi = reader["AdiSoyadi"].ToString();
+                string tL = reader["TL"].ToString();
+                string visibleTc = reader["TcNo"].ToString();
+                kul.lblAdiSoyadi.Text = adiSoyadi;
+                kul.lblTL.Text = tL;
+                kul.visibleofftc.Text = visibleTc;
+                kul.ShowDialog();
 
 
 
 
             }
-                else
-                {
-                    MessageBox.Show("Hatalı kullanıcı adı veya şifre.");
-                }
+            else
+            {
+                MessageBox.Show("Hatalı kullanıcı adı veya şifre.");
+            }
 
-                reader.Close();
-                connect.Close();
-            
+            reader.Close();
+            connect.Close();
+
         }
 
         private void kayıtOlLabel_Click(object sender, EventArgs e)
         {
             kayitolsyf kayitolsyf = new kayitolsyf();
-            kayitolsyf.Show(); 
+            kayitolsyf.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int kuladi = Convert.ToInt32(kuladitxtbox.Text);
-            int sifre = Convert.ToInt32(sifretxtbox.Text);
-            if (kuladi == 1 && sifre == 1) {
-                adminSyf admin = new adminSyf();
-                admin.Show();
+            try
+            {
+                int kuladi = Convert.ToInt32(kuladitxtbox.Text);
+                int sifre = Convert.ToInt32(sifretxtbox.Text);
+                if (kuladi == 1 && sifre == 1)
+                {
+                    adminSyf admin = new adminSyf();
+                    admin.Show();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen alanı boş bırakmayınız");
             }
         }
     }

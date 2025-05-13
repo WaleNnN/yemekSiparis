@@ -49,9 +49,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.odemeYapbtn = new System.Windows.Forms.Button();
+            this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
             this.odenecekTutartxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,6 +61,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.ımageList4 = new System.Windows.Forms.ImageList(this.components);
+            this.visibleofftc = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +70,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 94);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(430, 153);
@@ -124,6 +126,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Sipariş Geçmişi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblTL
             // 
@@ -250,6 +253,12 @@
             this.odemeYapbtn.UseVisualStyleBackColor = true;
             this.odemeYapbtn.Click += new System.EventHandler(this.odemeYapbtn_Click);
             // 
+            // ımageList3
+            // 
+            this.ımageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList3.ImageStream")));
+            this.ımageList3.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList3.Images.SetKeyName(0, "3827709_buy_buying_color_lineal_marketplace_icon.png");
+            // 
             // odenecekTutartxt
             // 
             this.odenecekTutartxt.Location = new System.Drawing.Point(420, 489);
@@ -267,12 +276,6 @@
             this.button1.Text = "Ödenecek Tutar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ımageList3
-            // 
-            this.ımageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList3.ImageStream")));
-            this.ımageList3.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList3.Images.SetKeyName(0, "3827709_buy_buying_color_lineal_marketplace_icon.png");
             // 
             // label5
             // 
@@ -295,7 +298,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(-10, 357);
+            this.panel1.Location = new System.Drawing.Point(1, 357);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(519, 23);
             this.panel1.TabIndex = 34;
@@ -352,11 +355,33 @@
             this.ımageList4.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList4.Images.SetKeyName(0, "8664938_trash_can_delete_remove_icon.png");
             // 
+            // visibleofftc
+            // 
+            this.visibleofftc.AutoSize = true;
+            this.visibleofftc.Location = new System.Drawing.Point(321, 60);
+            this.visibleofftc.Name = "visibleofftc";
+            this.visibleofftc.Size = new System.Drawing.Size(41, 13);
+            this.visibleofftc.TabIndex = 40;
+            this.visibleofftc.Text = "label10";
+            this.visibleofftc.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(321, 447);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 41;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // kullanicisiparisSyf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 589);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.visibleofftc);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -427,5 +452,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ImageList ımageList4;
+        public System.Windows.Forms.Label visibleofftc;
+        private System.Windows.Forms.Button button5;
     }
 }

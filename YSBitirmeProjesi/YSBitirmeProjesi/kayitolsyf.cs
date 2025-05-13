@@ -28,8 +28,13 @@ namespace YSBitirmeProjesi
                    $"VALUES ('{tcNotxtbox.Text}', '{adisoyaditxt.Text}', '{kullaniciaditxt.Text}', '{sifretxt.Text}', '{adrestxt.Text}', '{telefontxt.Text}')";
             MySqlCommand komut = new MySqlCommand(sorgu, connect);
             komut.ExecuteNonQuery();
+            string sorgu2 = "INSERT INTO siparisler (TcNo) " +
+                $"VALUES ('{tcNotxtbox.Text}')";
+            MySqlCommand komut2 = new MySqlCommand(sorgu2, connect);
+            komut2.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Üye başarı ile eklendi");
+
         }
     }
 }
