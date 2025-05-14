@@ -28,7 +28,7 @@ namespace YSBitirmeProjesi
                    $"VALUES ('{tcNotxtbox.Text}', '{adisoyaditxt.Text}', '{kullaniciaditxt.Text}', '{sifretxt.Text}', '{adrestxt.Text}', '{telefontxt.Text}')";
             MySqlCommand komut = new MySqlCommand(sorgu, connect);
             komut.ExecuteNonQuery();
-            
+            MessageBox.Show("Kayıt başarıyla eklendi");
 
         }
     }

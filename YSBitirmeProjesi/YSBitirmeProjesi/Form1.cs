@@ -15,6 +15,7 @@ namespace YSBitirmeProjesi
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace YSBitirmeProjesi
 
             if (reader.Read())
             {
-
+               
                 kullanicisiparisSyf kul = new kullanicisiparisSyf();
                 string adiSoyadi = reader["AdiSoyadi"].ToString();
                 string tL = reader["TL"].ToString();

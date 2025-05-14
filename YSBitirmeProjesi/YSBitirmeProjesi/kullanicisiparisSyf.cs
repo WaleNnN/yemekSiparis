@@ -37,6 +37,7 @@ namespace YSBitirmeProjesi
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             connect.Close();
+            
         }
 
         private void kulSiparisÜrünaditxt_TextChanged(object sender, EventArgs e)
@@ -208,19 +209,21 @@ namespace YSBitirmeProjesi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            siparisGecmisi siparisGecmisi = new siparisGecmisi();
-            siparisGecmisi.ShowDialog();
+           siparisGecmisi sp=new siparisGecmisi(visibleofftc.Text);
+            sp.ShowDialog();
+           
 
-            string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_;";
+
+            /*string connectionString = "Server=localhost;Database=yemek;Uid=root;Pwd=233789975668mM_;";
             MySqlConnection connect = new MySqlConnection(connectionString);
-            string tc = visibleofftc.Text;
-            string komut = $"SELECT * FROM siparisler WHERE TcNo = '{tc}'";
+            int tc = Convert.ToInt32(visibleofftc.Text);
+            string komut = $"SELECT * FROM siparisler WHERE TcNo = {tc}";
             connect.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(komut, connect);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            connect.Close();
+            connect.Close();*/
         }
 
         private void button5_Click(object sender, EventArgs e)
